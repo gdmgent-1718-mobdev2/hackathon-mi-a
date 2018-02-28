@@ -3,6 +3,9 @@ import { StyleSheet, View, TextInput, Text, TouchableOpacity, KeyboardAvoidingVi
 import ModalDropdown from 'react-native-modal-dropdown';
 import { Colors } from '../colors/colors.js';
 
+import Header from '../eachPage/header.js';
+import Social from '../eachPage/social.js';
+
 import * as firebase from "firebase";
 
 
@@ -35,7 +38,7 @@ function writeOrderData(Name, Store, Adres, Postcode, Stad, Parcel) {
 
   console.log('package sent')
 }
-export default class DeliveryForm extends Component {
+export default class DeliveryForm extends React.Component {
   state = {
     Name: 'Jane Doe',
     Store: 'Ikea Gent',
@@ -44,13 +47,14 @@ export default class DeliveryForm extends Component {
     Stad: 'Not Given',
     Parcel: '1111-12345-1502',
   };
-
   render() {
     return (
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
         {/* <StatusBar barStyle = "light-content"/> 
         <Text>Titel loginform</Text>*/}
         {/* text input email */}
+
+        
         <Text style={styles.title}>Nieuwe Levering</Text>
         <TextInput
           placeholder="naam"
@@ -125,8 +129,15 @@ export default class DeliveryForm extends Component {
         <TouchableOpacity onPress={this._submitForm} style={styles.buttoncontainer}>
           <Text style={styles.buttontext}>Verzenden</Text>
         </TouchableOpacity>
+
+      
       </KeyboardAvoidingView>
+
+      
     );
+
+
+   
   }
 
 

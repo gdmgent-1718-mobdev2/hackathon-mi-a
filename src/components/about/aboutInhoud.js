@@ -30,21 +30,21 @@ export default class AboutInhoud extends Component {
  const styles = StyleSheet.create({
   h1:{
     marginHorizontal: 20,
-    fontFamily: 'bjorn',
+    //fontFamily: 'bjorn',
     fontSize: 30,
     color: Colors.BLUE_H1,
   },
   h2:{
     marginTop: 25,
     marginHorizontal: 20,
-    fontFamily: 'bjorn',
+    //fontFamily: 'bjorn',
     fontSize: 25,
     color: Colors.BLUE_H1,
   },
   tekst:{
     marginTop: 15,
     marginHorizontal: 20,
-    fontFamily: 'roboto',
+    //fontFamily: 'roboto',
     fontSize: 20,
     color: Colors.BLACK,
   }

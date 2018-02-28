@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   },
   
   title: {
-    fontFamily: 'bjorn',
+    //fontFamily: 'bjorn',
    fontSize: 30,
    color: '#006633',
    marginTop: -50,
