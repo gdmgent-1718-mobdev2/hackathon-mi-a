@@ -1,63 +1,75 @@
+
+
 import React, { Component } from 'react';
+
+import { StackNavigator } from 'react-navigation';
+
+
+
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
+
+
 import Login from './src/components/login/login';
 import LoginForm from './src/components/login/loginForm';
 import RegisterForm from './src/components/login/registerform';
 import Splash from './src/components/splash/splash';
 import LogoMidden from './src/components/Logo/logoMidden';
-import {Colors} from './src/components/colors/colors.js';
-import DeliveryForm from './src/components/home/complete';
+
+import { Colors } from './src/components/colors/colors.js';
+
 import Deliveries from "./src/components/Deliveries/deliveries.js";
 import About from "./src/components/about/about.js";
 
-Expo.Font.loadAsync({
-  bjorn: require('./assets/fonts/Bjorn.otf'),
-  roboto: require('./assets/fonts/Roboto.ttf')
-});
+import Header from './src/components/eachPage/header';
+import Social from './src/components/eachPage/social';
 
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      Splash: 'yes',
-  }
-      this.getTime =  setInterval(() => {
-        this.setState({
-          Splash:'no'
-        })
-    }, 3000)
 
 
-}
-  
+
+
+export class HomeScreen extends React.Component {
   render() {
     return (
-      <ScrollView>
-    <View>
-            
-          
-          {this.state.Splash == 'yes' ? <Splash /> : <Login/>}
-         {/*  
-          {this.state.Splash == 'yes' ? <Splash /> : <DeliveryForm/>}
-
-          {this.state.Splash == 'yes' ? <Splash /> : <About/>}
-          
-          {this.state.Splash == 'yes' ? <Splash /> : <Deliveries/>} */}
-
-    </View>
-    </ScrollView>
+        <View>
+        <Login />
+        </View>
     );
   }
-}
+  
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+
+export class RequestScreen extends React.Component {
+  render() {
+    return (
+        <View>
+        <DeliveryForm />
+        </View>
+    );
+  }
+};
+
+
+
+
+
+export const RootStack = StackNavigator(
+  {
+    Home: {
+      screen: HomeScreen,
+    },
+    Request: {
+      screen: RequestScreen,
+    },
   },
-});
+  {
+    initialRouteName: 'Home',
+  }
+);
 
-export default App
+export default class App extends React.Component {
+  render() {
+    return <RootStack />;
+  }
+}
