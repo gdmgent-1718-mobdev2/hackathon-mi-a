@@ -19,11 +19,6 @@ var config = {
 };
 
 
-firebase.initializeApp(config);
-
-// Get a reference to the database service
-var database = firebase.database();
-
 
 function writeOrderData(Name, Store, Adres, Postcode, Stad, Parcel) {
   firebase.database().ref('Orders/' + Parcel).set({
