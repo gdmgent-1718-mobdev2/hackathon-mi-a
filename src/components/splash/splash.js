@@ -22,7 +22,6 @@ container: {
   flex: 1,
 },
 appName: {
-  paddingTop: 750,
   fontSize: 35,
   fontWeight: 'bold',
 },

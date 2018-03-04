@@ -16,7 +16,7 @@ import {
 
 
 
-export default class HomeScreen extends Component {
+export default class LoginScreen extends Component {
   render() {
     return (
       <ScrollView>

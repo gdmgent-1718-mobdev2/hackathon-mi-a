@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     padding: 20
   },
   input: {
-    //fontFamily: 'roboto',
+    fontFamily: 'roboto',
     height: 50,
     backgroundColor: '#00cc66',
     marginBottom: 10,
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   buttontext: {
-    //fontFamily: 'bjorn',
+    fontFamily: 'bjorn',
     textAlign: 'center',
     color: '#FFF',
     fontWeight: '700'
